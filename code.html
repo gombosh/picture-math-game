@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>תשבץ קוד</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="code-page">
+  <header>
+    <a class="back" href="./" aria-label="חזרה לתפריט">→</a>
+    <span class="subtitle">הצפנה</span>
+    <h1>תשבץ קוד</h1>
+  </header>
+
+  <main>
+    <nav id="progress" aria-label="בחירת תשבץ"></nav>
+    <h2 id="topic"></h2>
+    <section id="crossword" class="crossword" aria-live="polite"></section>
+    <p class="hint">כל תמונה היא אות. לחצו על תמונה ובחרו אות – היא תתמלא בכל מקום שבו התמונה מופיעה. המילים נקראות מימין לשמאל ומלמעלה למטה.</p>
+    <div id="keys" class="keys"></div>
+    <div class="actions">
+      <button id="check" class="primary">בדיקה</button>
+      <button id="reveal">רמז</button>
+      <button id="clear">נקה</button>
+    </div>
+    <p id="message" class="message" role="status"></p>
+  </main>
+
+  <script src="code.js"></script>
+</body>
+</html>

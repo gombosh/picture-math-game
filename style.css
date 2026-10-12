@@ -87,3 +87,50 @@ hr { border: 0; border-top: 4px solid #111; margin: 8px 0; }
   header { flex-direction: column-reverse; }
   .cell { width: 58px; height: 58px; }
 }
+
+/* back link + menu */
+.back {
+  font-size: 1.8rem; text-decoration: none; color: #fff; font-weight: 700;
+  border: 3px solid #111; border-radius: 50%; width: 44px; height: 44px;
+  display: grid; place-items: center; background: rgba(0,0,0,.15);
+}
+.menu { display: grid; gap: 16px; padding-top: 32px; }
+.menu-card {
+  display: flex; flex-direction: column; gap: 6px; align-items: center;
+  background: #fff; border: 5px solid #111; border-radius: 10px; padding: 24px 16px;
+  text-decoration: none; color: var(--ink);
+}
+.menu-card strong { font-size: 1.8rem; }
+.menu-card small { font-size: 1.1rem; color: #555; }
+.menu-pics { font-size: 2.6rem; letter-spacing: .2em; }
+
+/* code crossword */
+.code-page { --pink: #e4c1cf; --green: #e0914d; background: var(--pink); }
+.code-page header { background: var(--green); }
+.code-page main { max-width: 640px; }
+h2 { margin: 4px 0 10px; font-size: 1.6rem; }
+.crossword {
+  --cell: min(52px, calc((100vw - 56px) / var(--cols)));
+  display: grid; grid-template-columns: repeat(var(--cols), var(--cell)); grid-auto-rows: var(--cell);
+  justify-content: center; direction: ltr; background: #fff; border: 5px solid #111;
+  border-radius: 6px; padding: 14px 8px; overflow-x: auto;
+}
+.xcell { position: relative; padding: 0; background: #fff; border: 2px solid #222; cursor: pointer; }
+.xcell.empty { border: 0; background: none; }
+.xcell .pic { font-size: calc(var(--cell) * .55); line-height: 1; }
+.xcell .letter {
+  position: absolute; inset: auto 2px 0 auto; font-size: calc(var(--cell) * .42);
+  font-weight: 800; color: #1a6fb0; line-height: 1;
+}
+.xcell.selected { background: #fff1e8; outline: 3px solid var(--accent); z-index: 1; }
+.xcell.wrong .letter { color: #c0182b; }
+.xcell.wrong { background: #ffe3e3; }
+.keys { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 4px; }
+.keys button {
+  height: 52px; font-size: 1.5rem; font-weight: 700;
+  border: 3px solid #111; border-radius: 10px; background: #fff; cursor: pointer;
+}
+.keys button:disabled { opacity: .5; cursor: default; }
+.keys button.used { background: #eee; color: #999; }
+.code-page .hint { color: var(--ink); }
+.code-page .message { color: var(--ink); }

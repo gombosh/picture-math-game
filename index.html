@@ -3,27 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>תרגיל מאונך</title>
+  <title>משחקי תמונות</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <span class="subtitle">מספרים ותבניות</span>
-    <h1>תרגיל מאונך</h1>
+    <h1>משחקי תמונות</h1>
   </header>
-
-  <main>
-    <nav id="progress" aria-label="בחירת תרגיל"></nav>
-    <section id="card" class="card" aria-live="polite"></section>
-    <p class="hint">לחצו על תמונה, ואז בחרו את הספרה שהיא מייצגת. כל תמונה היא ספרה אחרת!</p>
-    <div id="pad" class="pad"></div>
-    <div class="actions">
-      <button id="check" class="primary">בדיקה</button>
-      <button id="clear">נקה</button>
-    </div>
-    <p id="message" class="message" role="status"></p>
+  <main class="menu">
+    <a class="menu-card math" href="math.html">
+      <span class="menu-pics">✋✋ ➕ 🍕</span>
+      <strong>תרגיל מאונך</strong>
+      <small>מספרים ותבניות</small>
+    </a>
+    <a class="menu-card code" href="code.html">
+      <span class="menu-pics">🍓 🧁 ⭐</span>
+      <strong>תשבץ קוד</strong>
+      <small>הצפנה</small>
+    </a>
   </main>
-
-  <script src="game.js"></script>
 </body>
 </html>
