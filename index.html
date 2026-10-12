@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>תרגיל מאונך</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span class="subtitle">מספרים ותבניות</span>
+    <h1>תרגיל מאונך</h1>
+  </header>
+
+  <main>
+    <nav id="progress" aria-label="בחירת תרגיל"></nav>
+    <section id="card" class="card" aria-live="polite"></section>
+    <p class="hint">לחצו על תמונה, ואז בחרו את הספרה שהיא מייצגת. כל תמונה היא ספרה אחרת!</p>
+    <div id="pad" class="pad"></div>
+    <div class="actions">
+      <button id="check" class="primary">בדיקה</button>
+      <button id="clear">נקה</button>
+    </div>
+    <p id="message" class="message" role="status"></p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
