@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>משוואות בתמונות</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="eq-page">
+  <header>
+    <a class="back" href="./" aria-label="חזרה לתפריט">→</a>
+    <span class="subtitle">חידות חשבון</span>
+    <h1>משוואות בתמונות</h1>
+  </header>
+
+  <main>
+    <nav id="progress" aria-label="בחירת חידה"></nav>
+    <section id="card" class="card eqs" aria-live="polite"></section>
+    <p class="hint">כל תמונה היא מספר סודי. גלו את המספרים וענו על השורה האחרונה!</p>
+    <div class="controls">
+      <div id="hints" class="hints"></div>
+      <p id="message" class="message" role="status"></p>
+      <div id="pad" class="pad numpad"></div>
+      <div class="actions">
+        <button id="check" class="primary">בדיקה</button>
+        <button id="hint">רמז</button>
+        <button id="clear">נקה</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="equations.js"></script>
+</body>
+</html>

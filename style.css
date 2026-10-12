@@ -152,3 +152,44 @@ h2 { margin: 4px 0 10px; font-size: 1.6rem; }
 .controls .actions { margin-top: 8px; }
 .controls .actions button { font-size: 1rem; padding: 6px 18px; border-width: 2px; }
 @media (min-width: 521px) { .keys { grid-template-columns: repeat(12, 1fr); } }
+
+/* picture equations */
+.eq-page { --pink: #b9d3e8; --green: #5f9ccf; background: var(--pink); }
+.eq-page header { background: var(--green); }
+.eqs { display: grid; gap: 4px; padding: 10px 8px; }
+.eq {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 64px; direction: ltr; border-bottom: 2px dashed #ddd;
+}
+.eq:last-child { border-bottom: 0; }
+.eq .pic { font-size: 2.1rem; line-height: 1; }
+.eq .op { font-size: 1.6rem; font-weight: 700; color: #555; }
+.eq .total { min-width: 2.2ch; font-size: 2rem; font-weight: 800; color: #1a6fb0; text-align: left; }
+.eq.question { background: #fff6e8; border-radius: 10px; }
+.eq.question .total { color: var(--accent); }
+.hints { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; min-height: 2rem; direction: ltr; }
+.chip { background: #fff; border: 2px solid #111; border-radius: 999px; padding: 2px 12px; font-size: 1.2rem; font-weight: 700; }
+.eq-page .hint, .eq-page .message { color: var(--ink); }
+.eq-page .hint { font-size: .95rem; margin: 10px 0 4px; }
+.numpad { grid-template-columns: repeat(6, 1fr); gap: 5px; }
+.numpad button { height: 46px; font-size: 1.4rem; }
+.eq-page .controls { margin: 0 -16px; padding-inline: 12px; background: var(--pink); }
+@media (max-width: 380px) { .eq .pic { font-size: 1.7rem; } }
+
+/* messages live inside the pinned bar so the keyboard never covers them */
+.controls .message { min-height: 0; margin: 0 0 6px; padding: 0; font-size: 1.05rem; }
+.controls .message:empty { display: none; }
+.controls .message.ok { padding: 4px 8px; }
+.controls .message button { font-size: 1rem; padding: 3px 12px; border-width: 2px; }
+.controls .hints { min-height: 0; margin-bottom: 6px; }
+.controls .hints:empty { display: none; }
+.eq-page h1 { white-space: nowrap; font-size: 1.25rem; }
+
+/* compact picture-equation rows so the question line stays above the pinned bar */
+.eq { min-height: 50px; }
+.eq .pic { font-size: 1.9rem; }
+.eq .total { font-size: 1.8rem; }
+.eqs { padding: 6px 8px; }
+.eq-page #progress { margin-bottom: 8px; }
+.numpad button { height: 40px; font-size: 1.3rem; }
+.pad[hidden] { display: none; }
